@@ -14,3 +14,4 @@
 # 后面的start同理
 # cd my-app
 # npm start
+# 构建静态文件使用npm run build
