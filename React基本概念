@@ -1,0 +1,3 @@
+useState - 状态管理，就是编辑，存储变量
+useEffect - 副作用处理，就是触发了条件后进行后处理
+useLocation - 帮助控制路由
