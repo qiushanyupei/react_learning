@@ -1,1 +1,25 @@
 使用jsx变量时必须用{}圈住
+用法示例：在React的return部分中需要这么干
+return (
+    <Router>
+      <div className="flex">
+        <Sidebar />
+        <div className="flex-1">
+          <Routes>
+            <Route path={PATH.GENERATE} element={<Test_Case_Generate />} />
+            <Route path={PATH.AGENT} element={<Multi_Agent_Manage />} />
+            <Route path={PATH.KB} element={<KB_Manage />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
+  );
+
+在非html语句中，即return前的内容中，不需要加大括号，示例见下：
+  const location = useLocation();
+
+  const navItems = [
+    { path: PATH.GENERATE, label: "🧪 测试用例生成" },
+    { path: PATH.AGENT, label: "📜 智能体管理" },
+    { path: PATH.KB, label: "⚙️ 知识库管理" },
+  ];
