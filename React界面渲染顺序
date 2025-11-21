@@ -1,3 +1,13 @@
 1、useState变量的定义和赋初值
 2、静态页面的渲染
 3、useEffect的执行
+useEffect(() => {
+  // 仅在组件第一次渲染完成后执行，后续组件更新不会再触发
+  fetch(`${apiUrl}/project/get_project_info?username=${userName}`);
+}, []); // 空依赖数组 → 不依赖任何状态/变量
+
+useEffect(() => {
+  // 首次渲染后执行1次，后续只要 project 或 module 变化，就会重新执行
+  console.log("项目或模块已更新", project, module);
+}, [project, module]); // 依赖 project 和 module 两个变量
+
